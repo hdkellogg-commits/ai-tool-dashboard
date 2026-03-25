@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tool Dashboard | v1.0</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #05070a;
+            --card-bg: rgba(20, 24, 35, 0.8);
+            --accent-blue: #00d4ff;
+            --accent-purple: #9d50bb;
+            --text-main: #e0e6ed;
+            --text-dim: #94a3b8;
+            --border: rgba(0, 212, 255, 0.2);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(157, 80, 187, 0.05) 0%, transparent 20%);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            background: rgba(10, 12, 18, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin: 0;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Table Styling */
+        .table-container {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: var(--card-bg);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--accent-blue);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            padding: 15px;
+            letter-spacing: 1px;
+        }
+
+        td {
+            padding: 20px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            vertical-align: top;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: var(--accent-purple);
+            text-shadow: 0 0 8px var(--accent-purple);
+        }
+
+        /* Implementation Section */
+        .details-section {
+            margin-top: 60px;
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--accent-blue);
+            border-left: 4px solid var(--accent-blue);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        .tool-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+        }
+
+        .ref-tag {
+            font-size: 0.8rem;
+            color: var(--accent-purple);
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .feature-list {
+            padding-left: 20px;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>AI Knowledge Terminal</h1>
+    </header>
+
+    <div class="container">
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tool Name</th>
+                        <th>Primary Purpose</th>
+                        <th>Key Features</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#idx">Antigravity IDE</a></td>
+                        <td>Cloud Development</td>
+                        <td>
+                            <ul class="feature-list">
+                                <li>AI-accelerated browser workflow</li>
+                                <li>Multiplatform app builds</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#stitcher">Google Cloud Video Stitcher</a></td>
+                        <td>Media Workflow</td>
+                        <td>
+                            <ul class="feature-list">
+                                <li>Dynamic ad insertion</li>
+                                <li>Manifest-level manipulation</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#firecrawl">Firecrawl</a></td>
+                        <td>Data Acquisition</td>
+                        <td>
+                            <ul class="feature-list">
+                                <li>LLM-ready Markdown output</li>
+                                <li>Advanced JS scraping</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="details-section">
+            <h2>Implementation Details</h2>
+
+            <div id="idx" class="tool-card">
+                <span class="ref-tag">REF: "ANTI-GRAVITY ID"</span>
+                <h3>Project IDX</h3>
+                <p>Google's cloud-based VM workspace designed to remove friction from local environment setups. Features AI-powered code completion and built-in emulators for Android and iOS directly in the browser.</p>
+            </div>
+
+            <div id="firecrawl" class="tool-card">
+                <span class="ref-tag">REF: "FIRECLAW"</span>
+                <h3>Firecrawl</h3>
+                <p>A specialized web scraper for AI engineers that converts messy HTML into clean, structured Markdown. This significantly reduces noise when feeding website data into RAG (Retrieval-Augmented Generation) pipelines.</p>
+            </div>
+
+            <div id="stitcher" class="tool-card">
+                <h3>Video Stitcher API</h3>
+                <p>An industrial-grade tool for personalizing live and VOD streams. It functions by "stitching" content at the manifest level, allowing for seamless integration of personalized video segments.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        &mdash; SYSTEM STABLE // AI WORKFLOW v1.0 &mdash;
+    </footer>
+
+</body>
+</html>
